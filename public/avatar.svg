@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 560" width="560" height="560" role="img" aria-label="Illustration of a developer coding at a laptop">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef1f8"/>
+      <stop offset="1" stop-color="#dfe6f5"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22305a"/>
+      <stop offset="1" stop-color="#161f3d"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#2c3e63" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- card -->
+  <rect x="0" y="0" width="560" height="560" rx="44" fill="url(#bg)"/>
+
+  <!-- decorative shapes -->
+  <circle cx="492" cy="78" r="96" fill="#3b5bdb" opacity="0.08"/>
+  <circle cx="86" cy="470" r="70" fill="#3b5bdb" opacity="0.07"/>
+  <circle cx="470" cy="440" r="6" fill="#3b5bdb" opacity="0.4"/>
+  <circle cx="120" cy="120" r="5" fill="#3b5bdb" opacity="0.35"/>
+  <circle cx="430" cy="150" r="4" fill="#2c3e63" opacity="0.3"/>
+
+  <!-- desk -->
+  <rect x="70" y="452" width="420" height="18" rx="9" fill="#c6cfe4"/>
+
+  <!-- person -->
+  <g>
+    <!-- shoulders / hoodie -->
+    <path d="M186 452c0-58 42-104 94-104s94 46 94 104z" fill="#2c3e63"/>
+    <path d="M256 360h48v34a24 24 0 0 1-48 0z" fill="#eac9a6"/>
+    <!-- head -->
+    <circle cx="280" cy="222" r="58" fill="#f0d0aa"/>
+    <!-- hair -->
+    <path d="M222 214c0-40 26-66 58-66s58 24 58 62c-12-16-30-22-58-22-20 0-30 6-38 14-8 8-14 6-20 12z" fill="#25314f"/>
+    <!-- headphone band -->
+    <path d="M220 224a60 60 0 0 1 120 0" fill="none" stroke="#3b5bdb" stroke-width="12" stroke-linecap="round"/>
+    <!-- ear cups -->
+    <rect x="210" y="212" width="22" height="46" rx="9" fill="#2c3e63"/>
+    <rect x="328" y="212" width="22" height="46" rx="9" fill="#2c3e63"/>
+    <!-- glasses -->
+    <rect x="248" y="214" width="26" height="20" rx="6" fill="#1c2947" opacity="0.12" stroke="#25314f" stroke-width="3"/>
+    <rect x="286" y="214" width="26" height="20" rx="6" fill="#1c2947" opacity="0.12" stroke="#25314f" stroke-width="3"/>
+    <line x1="274" y1="222" x2="286" y2="222" stroke="#25314f" stroke-width="3"/>
+    <!-- smile -->
+    <path d="M266 250c8 8 20 8 28 0" fill="none" stroke="#c98f5f" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- laptop -->
+  <g>
+    <rect x="206" y="366" width="148" height="92" rx="12" fill="url(#screen)"/>
+    <circle cx="280" cy="412" r="15" fill="#3b5bdb"/>
+    <path d="M280 405v14M273 412h14" stroke="#eef1f8" stroke-width="3" stroke-linecap="round"/>
+    <!-- base -->
+    <path d="M176 458h208l26 34H150z" fill="#cdd6ea"/>
+    <path d="M150 492h260v8a6 6 0 0 1-6 6H156a6 6 0 0 1-6-6z" fill="#b7c2db"/>
+  </g>
+
+  <!-- floating code window -->
+  <g filter="url(#soft)">
+    <rect x="58" y="118" width="188" height="140" rx="16" fill="#ffffff"/>
+    <circle cx="80" cy="140" r="5" fill="#ff8787"/>
+    <circle cx="98" cy="140" r="5" fill="#ffd43b"/>
+    <circle cx="116" cy="140" r="5" fill="#69db7c"/>
+    <rect x="76" y="162" width="44" height="9" rx="4.5" fill="#3b5bdb"/>
+    <rect x="126" y="162" width="52" height="9" rx="4.5" fill="#9db4ff"/>
+    <rect x="90" y="182" width="60" height="9" rx="4.5" fill="#6f8bff"/>
+    <rect x="156" y="182" width="30" height="9" rx="4.5" fill="#ffd8a8"/>
+    <rect x="90" y="202" width="38" height="9" rx="4.5" fill="#cfd8ea"/>
+    <rect x="134" y="202" width="66" height="9" rx="4.5" fill="#cfd8ea"/>
+    <rect x="76" y="222" width="50" height="9" rx="4.5" fill="#3b5bdb"/>
+    <rect x="132" y="222" width="28" height="9" rx="4.5" fill="#9db4ff"/>
+  </g>
+
+  <!-- floating </> badge -->
+  <g filter="url(#soft)">
+    <rect x="398" y="286" width="78" height="78" rx="22" fill="#ffffff"/>
+    <polyline points="424,312 412,325 424,338" fill="none" stroke="#3b5bdb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="450,312 462,325 450,338" fill="none" stroke="#3b5bdb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="444" y1="308" x2="430" y2="342" stroke="#3b5bdb" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

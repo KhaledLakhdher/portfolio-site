@@ -1,0 +1,130 @@
+%==============================================================
+%  Khaled Lakhdher — Curriculum Vitae (English)
+%  Compile with:  pdflatex khaled_cv_en.tex
+%  Works on Overleaf, MiKTeX, and TeX Live (standard packages only).
+%==============================================================
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}                 % serif font close to the original
+\usepackage[margin=1.4cm,top=1.1cm,bottom=1.0cm]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+% ---------- Colors ----------
+\definecolor{accent}{HTML}{2C3E63}   % navy headings
+\definecolor{muted}{HTML}{52606D}    % grey secondary text
+
+\hypersetup{colorlinks=true,urlcolor=accent,linkcolor=accent}
+
+% ---------- Section style ----------
+\titleformat{\section}
+  {\color{accent}\bfseries\large\scshape}
+  {}{0em}{}[{\color{muted!40}\titlerule[0.8pt]}]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% ---------- List style ----------
+\setlist[itemize]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textbullet}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% ---------- Helper: role line with right-aligned date ----------
+\newcommand{\entry}[2]{\textbf{#1}\hfill{\small\color{muted}#2}\par}
+\newcommand{\org}[1]{{\itshape\color{muted}#1}\par}
+\newcommand{\proj}[1]{\textbf{#1}\par}
+
+%==============================================================
+\begin{document}
+
+% ---------- Header ----------
+\begin{center}
+  {\LARGE\bfseries\color{accent} Khaled Lakhdher}\\[3pt]
+  {\large\color{muted} Computer Engineer \;|\; AI \& Data Science \;|\; Full-Stack AI Developer}\\[5pt]
+  {\small\color{muted}
+    Sousse, Tunisia \quad|\quad
+    \href{mailto:ing.khaledlakhdher@gmail.com}{ing.khaledlakhdher@gmail.com} \quad|\quad
+    +216 29 843 899 \quad|\quad
+    \href{https://www.linkedin.com/in/khaled-lakhdher}{in/khaled-lakhdher}
+  }
+\end{center}
+
+% ---------- Profile ----------
+\section{Profile}
+Passionate Machine Learning engineering student with a solid foundation in deep learning,
+computer vision, and natural language processing. Proficient in Python and TensorFlow, with
+hands-on experience building and deploying AI models. Eager to apply my skills to real-world
+challenges and contribute to innovative artificial intelligence solutions.
+
+% ---------- Experience ----------
+\section{Experience}
+\entry{AI Engineer --- Final-Year Project (PFE)}{Feb 2026 -- June 2026 \textperiodcentered\ Tunisia}
+\org{CTT -- Carthage Training \& Technologies}
+\begin{itemize}
+  \item Designed and developed \textbf{Hotel Mind}, a conversational hotel-booking assistant built on a grounded RAG architecture, connected to a real-time SOAP booking API.
+  \item Delivered a containerized full-stack solution achieving nDCG@5 of 0.82, MRR@5 of 0.90, and a 100\% success rate on a benchmark query set.
+  \item Built a hallucination-mitigation layer that verifies every factual claim, ensuring the assistant never invents a price or a booking.
+\end{itemize}
+\medskip
+\entry{Artificial Intelligence Developer Intern}{July 2025 -- September 2025 \textperiodcentered\ Hammamet}
+\org{CTT -- Carthage Training \& Technologies}
+\begin{itemize}
+  \item Fine-tuned a Hugging Face NLP model to classify customer reviews by sentiment (positive, negative, neutral).
+  \item Built a Django backend to manage customer data and automate export of results to Excel for reporting.
+  \item Handled all preprocessing, training, and integration scripts in Python.
+\end{itemize}
+
+% ---------- Projects ----------
+\section{Projects}
+
+\proj{Personalized Voice Assistant}
+\begin{itemize}
+  \item Fine-tuned Whisper (STT) and SpeechT5 (TTS) with CSM-1B voice cloning to build a personalized
+        voice assistant, cutting response time by 30\%.
+\end{itemize}
+
+\proj{AI Image Colorization \& Automatic Code Generation}
+\begin{itemize}
+  \item Trained a Pix2Pix GAN (U-Net / PatchGAN) for automatic image colorization and built a multi-agent
+        system (Planner / Architect / Coder) that generates full-stack projects (Flask, HTML/CSS/JS, APIs)
+        from a single prompt, served through an interactive web app.
+\end{itemize}
+
+% ---------- Certifications ----------
+\section{Certifications}
+\begin{itemize}
+  \item Fundamentals of Deep Learning --- NVIDIA {\color{muted}(Nov 22, 2022)}
+  \item Building Transformer-Based Natural Language Processing Applications --- NVIDIA {\color{muted}(Dec 19, 2025)}
+  \item Applications of AI for Predictive Maintenance --- NVIDIA {\color{muted}(Oct 27, 2025)}
+  \item CCNA 1: Introduction to Networks --- Cisco Networking Academy {\color{muted}(Mar 15, 2024)}
+  \item CCNA 2: Switching, Routing, and Wireless Essentials --- Cisco Networking Academy {\color{muted}(Mar 15, 2024)}
+\end{itemize}
+
+% ---------- Skills ----------
+\section{Skills}
+\textbf{\color{accent}Programming Languages:} Python \textperiodcentered\ Java \textperiodcentered\ C \textperiodcentered\ SQL \textperiodcentered\ JavaScript \textperiodcentered\ TypeScript \textperiodcentered\ React.js \textperiodcentered\ React Native \textperiodcentered\ HTML/CSS \textperiodcentered\ Tailwind CSS\par
+\smallskip
+\textbf{\color{accent}AI Libraries \& Frameworks:} Transformers \textperiodcentered\ PyTorch \textperiodcentered\ TensorFlow \textperiodcentered\ Keras \textperiodcentered\ Hugging Face \textperiodcentered\ Hugging Face Hub \textperiodcentered\ scikit-learn \textperiodcentered\ Pandas \textperiodcentered\ NumPy \textperiodcentered\ Matplotlib\par
+\smallskip
+\textbf{\color{accent}Development Frameworks \& Tools:} Gradio \textperiodcentered\ Streamlit \textperiodcentered\ Flask \textperiodcentered\ Django \textperiodcentered\ Zeep \textperiodcentered\ LangSmith \textperiodcentered\ Pydantic \textperiodcentered\ Docker Compose \textperiodcentered\ Nginx / Reverse Proxy \textperiodcentered\ Postman \textperiodcentered\ Git \textperiodcentered\ GitHub\par
+\smallskip
+\textbf{\color{accent}Concepts \& Technologies:} Artificial Intelligence (AI) \textperiodcentered\ Machine Learning (ML) \textperiodcentered\ Deep Learning (DL) \textperiodcentered\ Large Language Models (LLMs) \textperiodcentered\ AI Agents \textperiodcentered\ Agentic AI \textperiodcentered\ Tool-Calling \textperiodcentered\ Prompt Engineering \textperiodcentered\ NLP \textperiodcentered\ ASR \textperiodcentered\ GANs \textperiodcentered\ Vector Databases \textperiodcentered\ Semantic Search \textperiodcentered\ Embeddings \textperiodcentered\ Information Retrieval \textperiodcentered\ API Development \textperiodcentered\ NoSQL \textperiodcentered\ Cloud Computing\par
+
+% ---------- Education ----------
+\section{Education}
+\entry{Computer Engineering --- AI \& Data Science Specialization}{2023 -- 2026}
+\org{IEPI -- International Polytechnic School \textperiodcentered\ Sousse, Tunisia}
+\medskip
+
+\entry{Preparatory Cycle}{2021 -- 2023}
+\org{EPI -- Private International Polytechnic School \textperiodcentered\ Sousse, Tunisia}
+
+% ---------- Languages ----------
+\section{Languages}
+\textbf{\color{accent}French:} DELF B2 \qquad
+\textbf{\color{accent}English:} TOEIC (Listening \& Reading) --- 825/990
+
+\end{document}

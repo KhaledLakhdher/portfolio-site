@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Khaled Lakhdher — CV</title>
+<style>
+  :root {
+    --ink: #1f2933;
+    --accent: #2c3e63;   /* navy used for headings */
+    --muted: #52606d;
+    --rule: #c7ccd4;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #e9ebee;
+    color: var(--ink);
+    font-family: "Charter", "Georgia", "Cambria", "Times New Roman", serif;
+    font-size: 10.4pt;
+    line-height: 1.42;
+  }
+
+  .page {
+    background: #fff;
+    width: 210mm;
+    min-height: 297mm;
+    margin: 18px auto;
+    padding: 16mm 17mm 14mm;
+    box-shadow: 0 2px 14px rgba(0,0,0,.14);
+  }
+
+  /* ---------- Header ---------- */
+  header { text-align: center; margin-bottom: 6px; }
+
+  h1 {
+    font-size: 21pt;
+    font-weight: 700;
+    margin: 0 0 2px;
+    color: var(--accent);
+    letter-spacing: .2px;
+  }
+
+  .subtitle {
+    font-size: 11.5pt;
+    color: var(--muted);
+    margin: 0 0 6px;
+  }
+
+  .contact {
+    font-size: 9.4pt;
+    color: var(--muted);
+  }
+  .contact span { white-space: nowrap; }
+  .contact .sep { margin: 0 8px; color: var(--rule); }
+
+  /* ---------- Sections ---------- */
+  section { margin-top: 13px; }
+
+  h2 {
+    font-size: 11.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    color: var(--accent);
+    margin: 0 0 6px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  p { margin: 0 0 4px; }
+
+  .entry { margin-bottom: 9px; }
+  .entry:last-child { margin-bottom: 0; }
+
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .role { font-weight: 700; }
+  .org  { color: var(--muted); font-style: italic; }
+  .meta { color: var(--muted); font-size: 9.3pt; white-space: nowrap; }
+
+  ul {
+    margin: 3px 0 0;
+    padding-left: 17px;
+  }
+  li { margin-bottom: 2px; }
+
+  .proj-title { font-weight: 700; margin-bottom: 1px; }
+
+  .skills-line { margin-bottom: 3px; }
+  .skills-line b { color: var(--accent); }
+
+  .cert-list { list-style: none; margin: 0; padding: 0; }
+  .cert-list li { margin-bottom: 3px; padding-left: 14px; position: relative; }
+  .cert-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .cert-list .date { color: var(--muted); }
+
+  @media print {
+    html, body { background: #fff; font-size: 10.2pt; }
+    .page { width: auto; min-height: auto; margin: 0; padding: 12mm 14mm; box-shadow: none; }
+    @page { size: A4; margin: 0; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header>
+    <h1>Khaled Lakhdher</h1>
+    <p class="subtitle">Computer Engineer&nbsp;·&nbsp;AI &amp; Data Science&nbsp;·&nbsp;Full-Stack AI Developer</p>
+    <p class="contact">
+      <span>Sousse, Tunisia</span><span class="sep">|</span>
+      <span>ing.khaledlakhdher@gmail.com</span><span class="sep">|</span>
+      <span>+216 29 843 899</span><span class="sep">|</span>
+      <span>in/khaled-lakhdher</span>
+    </p>
+  </header>
+
+  <section>
+    <h2>Profile</h2>
+    <p>Passionate Machine Learning engineering student with a solid foundation in deep learning,
+    computer vision, and natural language processing. Proficient in Python and TensorFlow, with
+    hands-on experience building and deploying AI models. Eager to apply my skills to real-world
+    challenges and contribute to innovative artificial intelligence solutions.</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <div><span class="role">AI Engineer — Final-Year Project (PFE)</span></div>
+        <div class="meta">Feb 2026 – June 2026 · Tunisia</div>
+      </div>
+      <div class="org">CTT – Carthage Training &amp; Technologies</div>
+      <ul>
+        <li>Designed and developed <b>Hotel Mind</b>, a conversational hotel-booking assistant built on a grounded RAG architecture, connected to a real-time SOAP booking API.</li>
+        <li>Delivered a containerized full-stack solution achieving nDCG@5 of 0.82, MRR@5 of 0.90, and a 100% success rate on a benchmark query set.</li>
+        <li>Built a hallucination-mitigation layer that verifies every factual claim, ensuring the assistant never invents a price or a booking.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div><span class="role">Artificial Intelligence Developer Intern</span></div>
+        <div class="meta">July 2025 – September 2025 · Hammamet</div>
+      </div>
+      <div class="org">CTT – Carthage Training &amp; Technologies</div>
+      <ul>
+        <li>Fine-tuned a Hugging Face NLP model to classify customer reviews by sentiment (positive, negative, neutral).</li>
+        <li>Built a Django backend to manage customer data and automate export of results to Excel for reporting.</li>
+        <li>Handled all preprocessing, training, and integration scripts in Python.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+
+    <div class="entry">
+      <div class="proj-title">Personalized Voice Assistant</div>
+      <ul>
+        <li>Fine-tuned Whisper (STT) and SpeechT5 (TTS) with CSM-1B voice cloning to build a personalized
+        voice assistant, cutting response time by 30%.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="proj-title">AI Image Colorization &amp; Automatic Code Generation</div>
+      <ul>
+        <li>Trained a Pix2Pix GAN (U-Net / PatchGAN) for automatic image colorization and built a multi-agent
+        system (Planner / Architect / Coder) that generates full-stack projects (Flask, HTML/CSS/JS, APIs)
+        from a single prompt, served through an interactive web app.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <ul class="cert-list">
+      <li>Fundamentals of Deep Learning — NVIDIA <span class="date">(Nov 22, 2022)</span></li>
+      <li>Building Transformer-Based Natural Language Processing Applications — NVIDIA <span class="date">(Dec 19, 2025)</span></li>
+      <li>Applications of AI for Predictive Maintenance — NVIDIA <span class="date">(Oct 27, 2025)</span></li>
+      <li>CCNA 1: Introduction to Networks — Cisco Networking Academy <span class="date">(Mar 15, 2024)</span></li>
+      <li>CCNA 2: Switching, Routing, and Wireless Essentials — Cisco Networking Academy <span class="date">(Mar 15, 2024)</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <p class="skills-line"><b>Programming Languages:</b> Python · Java · C · SQL · JavaScript · TypeScript · React.js · React Native · HTML/CSS · Tailwind CSS</p>
+    <p class="skills-line"><b>AI Libraries &amp; Frameworks:</b> Transformers · PyTorch · TensorFlow · Keras · Hugging Face · Hugging Face Hub · scikit-learn · Pandas · NumPy · Matplotlib</p>
+    <p class="skills-line"><b>Development Frameworks &amp; Tools:</b> Gradio · Streamlit · Flask · Django · Zeep · LangSmith · Pydantic · Docker Compose · Nginx / Reverse Proxy · Postman · Git · GitHub</p>
+    <p class="skills-line"><b>Concepts &amp; Technologies:</b> Artificial Intelligence (AI) · Machine Learning (ML) · Deep Learning (DL) · Large Language Models (LLMs) · AI Agents · Agentic AI · Tool-Calling · Prompt Engineering · NLP · ASR · GANs · Vector Databases · Semantic Search · Embeddings · Information Retrieval · API Development · NoSQL · Cloud Computing</p>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <div><span class="role">Computer Engineering — AI &amp; Data Science Specialization</span></div>
+        <div class="meta">2023 – 2026</div>
+      </div>
+      <div class="org">IEPI – International Polytechnic School · Sousse, Tunisia</div>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <div><span class="role">Preparatory Cycle</span></div>
+        <div class="meta">2021 – 2023</div>
+      </div>
+      <div class="org">EPI – Private International Polytechnic School · Sousse, Tunisia</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Languages</h2>
+    <p class="skills-line"><b>French:</b> DELF B2 &nbsp;&nbsp;&nbsp; <b>English:</b> TOEIC (Listening &amp; Reading) — 825/990</p>
+  </section>
+
+</main>
+</body>
+</html>

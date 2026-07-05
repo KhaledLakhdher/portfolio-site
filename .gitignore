@@ -1,0 +1,36 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# env (never commit your API keys)
+.env
+.env.*
+!.env.example
+
+# build output
+dist
+dist-ssr
+*.local
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# editor / os
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
+
+# vercel
+.vercel
+
+# latex build artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz
