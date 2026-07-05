@@ -6,9 +6,9 @@
   "description": "Personal portfolio of Khaled Lakhdher — AI Engineer & Full-Stack AI Developer",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "lint": "tsc -b --noEmit"
+    "lint": "tsc --noEmit"
   },
   "dependencies": {
     "@react-three/drei": "^9.114.3",
