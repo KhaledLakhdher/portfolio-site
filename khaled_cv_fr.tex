@@ -3,13 +3,13 @@
 %  Compilation :  pdflatex khaled_cv_fr.tex
 %  Fonctionne sur Overleaf, MiKTeX et TeX Live (paquets standard).
 %==============================================================
-\documentclass[10pt,a4paper]{article}
+\documentclass[11pt,a4paper]{article}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 \usepackage{charter}                 % police serif proche de l'original
-\usepackage[margin=1.25cm,top=0.8cm,bottom=0.7cm]{geometry}
+\usepackage[margin=0.95cm,top=0.6cm,bottom=0.5cm]{geometry}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{titlesec}
 \usepackage{enumitem}
@@ -25,14 +25,14 @@
 \titleformat{\section}
   {\color{accent}\bfseries\large\scshape}
   {}{0em}{}[{\color{muted!40}\titlerule[0.8pt]}]
-\titlespacing*{\section}{0pt}{5pt}{2pt}
+\titlespacing*{\section}{0pt}{4pt}{2pt}
 
 % ---------- Style des listes ----------
 \setlist[itemize]{leftmargin=1.3em,itemsep=0.5pt,topsep=1pt,parsep=0pt,label=\textbullet}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\linespread{0.96}
+\linespread{0.92}
 
 % ---------- Aides ----------
 \newcommand{\entry}[2]{\textbf{#1}\hfill{\small\color{muted}#2}\par}
@@ -51,7 +51,8 @@
     \href{mailto:ing.khaledlakhdher@gmail.com}{ing.khaledlakhdher@gmail.com} \quad|\quad
     +216 29 843 899 \quad|\quad
     \href{https://www.linkedin.com/in/khaled-lakhdher}{in/khaled-lakhdher}
-  }
+  }\\[3pt]
+  {\small\href{https://khaled-lakhdher-portfolio.vercel.app}{\textbf{\color{accent}Portfolio : khaled-lakhdher-portfolio.vercel.app}}}
 \end{center}
 
 % ---------- Profil ----------
@@ -98,12 +99,6 @@ déploiement de modèles d'IA, motivé à contribuer à des solutions innovantes
   \item Entraînement d'un GAN Pix2Pix (U-Net / PatchGAN) pour la colorisation automatique d'images et
         développement d'un système multi-agents (Planner / Architect / Coder) générant des projets
         full-stack (Flask, HTML/CSS/JS, API) à partir d'un simple prompt, servis via une interface web interactive.
-\end{itemize}
-
-\proj{Portfolio de Développeur assisté par IA}
-\begin{itemize}
-  \item Développement d'un portfolio responsive avec React, TypeScript et Tailwind, intégrant un assistant
-        RAG (LLM via OpenRouter ancré sur mon CV avec une couche anti-hallucination), déployé sur Vercel.
 \end{itemize}
 
 % ---------- Certifications ----------

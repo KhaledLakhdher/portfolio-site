@@ -62,6 +62,17 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: 'Nexus AI — AI-Employee Management Platform',
+    blurb:
+      'A multi-tenant platform where LLM agents are governed like employees — scoped permissions, vector memory, orchestration, and per-agent cost tracking.',
+    bullets: [
+      'Built a multi-tenant full-stack platform (FastAPI, PostgreSQL/pgvector, Redis, Next.js, TypeScript) where LLM agents are governed like employees: scoped IAM-style permissions enforced at the tool-execution boundary, hierarchical vector memory with semantic recall, and a provider-agnostic model gateway (Anthropic / OpenRouter–Gemini) with per-agent cost tracking.',
+      'Engineered a multi-agent orchestration engine over a Redis Streams message bus with real-time WebSocket monitoring and an append-only audit log, running live agents for a fraction of a cent per run.',
+    ],
+    tags: ['FastAPI', 'pgvector', 'Redis Streams', 'Next.js', 'Multi-Agent', 'WebSockets'],
+    featured: true,
+  },
+  {
     title: 'Hotel Mind — Grounded Booking Assistant',
     blurb:
       'A conversational hotel-booking assistant on a grounded RAG architecture, wired to a live SOAP reservation API.',
