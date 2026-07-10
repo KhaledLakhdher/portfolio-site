@@ -9,7 +9,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 \usepackage{charter}                 % police serif proche de l'original
-\usepackage[margin=1.4cm,top=1.0cm,bottom=0.85cm]{geometry}
+\usepackage[margin=1.25cm,top=0.8cm,bottom=0.7cm]{geometry}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{titlesec}
 \usepackage{enumitem}
@@ -25,13 +25,14 @@
 \titleformat{\section}
   {\color{accent}\bfseries\large\scshape}
   {}{0em}{}[{\color{muted!40}\titlerule[0.8pt]}]
-\titlespacing*{\section}{0pt}{6pt}{3pt}
+\titlespacing*{\section}{0pt}{5pt}{2pt}
 
 % ---------- Style des listes ----------
 \setlist[itemize]{leftmargin=1.3em,itemsep=0.5pt,topsep=1pt,parsep=0pt,label=\textbullet}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
+\linespread{0.96}
 
 % ---------- Aides ----------
 \newcommand{\entry}[2]{\textbf{#1}\hfill{\small\color{muted}#2}\par}
@@ -55,22 +56,19 @@
 
 % ---------- Profil ----------
 \section{Profil}
-Étudiant passionné en ingénierie du Machine Learning, disposant d'une solide base en deep learning,
-vision par ordinateur et traitement du langage naturel. Maîtrise de Python et TensorFlow, avec une
-expérience pratique dans le développement et le déploiement de modèles d'IA. Motivé à appliquer mes
-compétences pour relever des défis concrets et contribuer à des solutions innovantes en intelligence
-artificielle.
+Étudiant passionné en ingénierie du Machine Learning, avec une solide base en deep learning, vision par
+ordinateur et NLP. Maîtrise de Python et TensorFlow et expérience pratique du développement et du
+déploiement de modèles d'IA, motivé à contribuer à des solutions innovantes en intelligence artificielle.
 
 % ---------- Expérience ----------
 \section{Expérience}
 \entry{Ingénieur IA --- Projet de Fin d'Études (PFE)}{Févr. 2026 -- Juin 2026 \textperiodcentered\ Tunisie}
 \org{CTT -- Carthage Training \& Technologies}
 \begin{itemize}
-  \item Conception et développement de \textbf{Hotel Mind}, un assistant conversationnel de réservation hôtelière basé sur une architecture RAG ancrée, connecté à une API SOAP de réservation en temps réel.
+  \item Conception et développement de \textbf{Hotel Mind}, un assistant conversationnel de réservation hôtelière sur une architecture RAG ancrée connectée à une API SOAP en temps réel, avec une couche de mitigation des hallucinations vérifiant chaque affirmation factuelle.
   \item Livraison d'une solution full-stack conteneurisée atteignant un nDCG@5 de 0,82, un MRR@5 de 0,90 et un taux de réussite de 100\,\% sur un jeu de requêtes de référence.
-  \item Développement d'une couche de mitigation des hallucinations vérifiant chaque affirmation factuelle, garantissant que l'assistant n'invente jamais un prix ni une réservation.
 \end{itemize}
-\vspace{3pt}
+\vspace{2pt}
 \entry{Stagiaire Développeur en Intelligence Artificielle}{Juil. 2025 -- Sept. 2025 \textperiodcentered\ Hammamet}
 \org{CTT -- Carthage Training \& Technologies}
 \begin{itemize}
@@ -81,6 +79,13 @@ artificielle.
 
 % ---------- Projets ----------
 \section{Projets}
+
+\proj{Nexus AI --- Plateforme de Gestion d'Employés IA}
+\begin{itemize}
+  \item Plateforme multi-tenant (FastAPI, PostgreSQL/pgvector, Redis, Next.js) pilotant des agents LLM avec
+        permissions IAM, mémoire vectorielle, orchestration multi-agents (bus Redis) et supervision temps réel
+        par WebSocket, via une passerelle de modèles agnostique (Anthropic, OpenRouter, Gemini).
+\end{itemize}
 
 \proj{Assistant Vocal Personnalisé}
 \begin{itemize}
@@ -95,14 +100,18 @@ artificielle.
         full-stack (Flask, HTML/CSS/JS, API) à partir d'un simple prompt, servis via une interface web interactive.
 \end{itemize}
 
+\proj{Portfolio de Développeur assisté par IA}
+\begin{itemize}
+  \item Développement d'un portfolio responsive avec React, TypeScript et Tailwind, intégrant un assistant
+        RAG (LLM via OpenRouter ancré sur mon CV avec une couche anti-hallucination), déployé sur Vercel.
+\end{itemize}
+
 % ---------- Certifications ----------
 \section{Certifications}
 \begin{itemize}
   \item Fundamentals of Deep Learning --- NVIDIA {\color{muted}(22 nov. 2022)}
   \item Building Transformer-Based Natural Language Processing Applications --- NVIDIA {\color{muted}(19 déc. 2025)}
   \item Applications of AI for Predictive Maintenance --- NVIDIA {\color{muted}(27 oct. 2025)}
-  \item CCNA 1 : Introduction to Networks --- Cisco Networking Academy {\color{muted}(15 mars 2024)}
-  \item CCNA 2 : Switching, Routing, and Wireless Essentials --- Cisco Networking Academy {\color{muted}(15 mars 2024)}
 \end{itemize}
 
 % ---------- Compétences ----------
@@ -119,7 +128,7 @@ artificielle.
 \section{Formation}
 \entry{Ingénieur en Informatique --- Spécialité IA \& Data Science}{2023 -- 2026}
 \org{IEPI -- École Polytechnique Internationale \textperiodcentered\ Sousse, Tunisie}
-\vspace{3pt}
+\vspace{2pt}
 
 \entry{Cycle Préparatoire}{2021 -- 2023}
 \org{EPI -- École Polytechnique Internationale Privée \textperiodcentered\ Sousse, Tunisie}

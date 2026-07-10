@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 /**
  * Dev-only middleware that mirrors the Vercel serverless function at /api/chat,
- * so the AI assistant works during `npm run dev`. It loads api/_core.ts through
+ * so the AI assistant works during `npm run dev`. It loads api/chat.ts through
  * Vite's SSR pipeline (which understands TypeScript + imports).
  */
 function devApiChat(): Plugin {
@@ -24,7 +24,7 @@ function devApiChat(): Plugin {
           res.setHeader('Content-Type', 'application/json')
           try {
             const { messages } = JSON.parse(body || '{}')
-            const mod = await server.ssrLoadModule('/api/_core.ts')
+            const mod = await server.ssrLoadModule('/api/chat.ts')
             const { reply } = await mod.generateReply(messages)
             res.end(JSON.stringify({ reply }))
           } catch (e: any) {

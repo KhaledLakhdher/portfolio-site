@@ -8,7 +8,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{charter}                 % serif font close to the original
-\usepackage[margin=1.4cm,top=1.1cm,bottom=1.0cm]{geometry}
+\usepackage[margin=1.35cm,top=0.9cm,bottom=0.8cm]{geometry}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{titlesec}
 \usepackage{enumitem}
@@ -24,10 +24,10 @@
 \titleformat{\section}
   {\color{accent}\bfseries\large\scshape}
   {}{0em}{}[{\color{muted!40}\titlerule[0.8pt]}]
-\titlespacing*{\section}{0pt}{8pt}{4pt}
+\titlespacing*{\section}{0pt}{6pt}{3pt}
 
 % ---------- List style ----------
-\setlist[itemize]{leftmargin=1.3em,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textbullet}
+\setlist[itemize]{leftmargin=1.3em,itemsep=0.5pt,topsep=1pt,parsep=0pt,label=\textbullet}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
@@ -64,11 +64,10 @@ challenges and contribute to innovative artificial intelligence solutions.
 \entry{AI Engineer --- Final-Year Project (PFE)}{Feb 2026 -- June 2026 \textperiodcentered\ Tunisia}
 \org{CTT -- Carthage Training \& Technologies}
 \begin{itemize}
-  \item Designed and developed \textbf{Hotel Mind}, a conversational hotel-booking assistant built on a grounded RAG architecture, connected to a real-time SOAP booking API.
-  \item Delivered a containerized full-stack solution achieving nDCG@5 of 0.82, MRR@5 of 0.90, and a 100\% success rate on a benchmark query set.
-  \item Built a hallucination-mitigation layer that verifies every factual claim, ensuring the assistant never invents a price or a booking.
+  \item Designed and developed \textbf{Hotel Mind}, a conversational hotel-booking assistant on a grounded RAG architecture connected to a real-time SOAP API, with a hallucination-mitigation layer that verifies every factual claim.
+  \item Delivered a containerized full-stack solution reaching nDCG@5 0.82, MRR@5 0.90, and a 100\% success rate on a benchmark query set.
 \end{itemize}
-\medskip
+\vspace{3pt}
 \entry{Artificial Intelligence Developer Intern}{July 2025 -- September 2025 \textperiodcentered\ Hammamet}
 \org{CTT -- Carthage Training \& Technologies}
 \begin{itemize}
@@ -79,6 +78,13 @@ challenges and contribute to innovative artificial intelligence solutions.
 
 % ---------- Projects ----------
 \section{Projects}
+
+\proj{Nexus AI --- AI-Employee Management Platform}
+\begin{itemize}
+  \item Built a multi-tenant platform (FastAPI, PostgreSQL/pgvector, Redis, Next.js) governing LLM agents
+        with IAM permissions, vector memory, multi-agent orchestration over a Redis message bus, and
+        real-time WebSocket monitoring, behind a provider-agnostic model gateway (Anthropic, OpenRouter, Gemini).
+\end{itemize}
 
 \proj{Personalized Voice Assistant}
 \begin{itemize}
@@ -93,14 +99,18 @@ challenges and contribute to innovative artificial intelligence solutions.
         from a single prompt, served through an interactive web app.
 \end{itemize}
 
+\proj{AI-Powered Developer Portfolio}
+\begin{itemize}
+  \item Built a responsive portfolio with React, TypeScript, and Tailwind, featuring an embedded RAG
+        assistant (OpenRouter LLM grounded in my CV with a hallucination guard); deployed on Vercel.
+\end{itemize}
+
 % ---------- Certifications ----------
 \section{Certifications}
 \begin{itemize}
   \item Fundamentals of Deep Learning --- NVIDIA {\color{muted}(Nov 22, 2022)}
   \item Building Transformer-Based Natural Language Processing Applications --- NVIDIA {\color{muted}(Dec 19, 2025)}
   \item Applications of AI for Predictive Maintenance --- NVIDIA {\color{muted}(Oct 27, 2025)}
-  \item CCNA 1: Introduction to Networks --- Cisco Networking Academy {\color{muted}(Mar 15, 2024)}
-  \item CCNA 2: Switching, Routing, and Wireless Essentials --- Cisco Networking Academy {\color{muted}(Mar 15, 2024)}
 \end{itemize}
 
 % ---------- Skills ----------
@@ -117,7 +127,7 @@ challenges and contribute to innovative artificial intelligence solutions.
 \section{Education}
 \entry{Computer Engineering --- AI \& Data Science Specialization}{2023 -- 2026}
 \org{IEPI -- International Polytechnic School \textperiodcentered\ Sousse, Tunisia}
-\medskip
+\vspace{3pt}
 
 \entry{Preparatory Cycle}{2021 -- 2023}
 \org{EPI -- Private International Polytechnic School \textperiodcentered\ Sousse, Tunisia}
