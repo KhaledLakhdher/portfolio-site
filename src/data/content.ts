@@ -4,7 +4,7 @@ export const profile = {
   tagline:
     'I build grounded conversational AI, RAG systems, and applied deep-learning products — from model to full-stack deployment.',
   summary:
-    'Machine Learning engineering student with a solid foundation in deep learning, computer vision, and natural language processing. Proficient in Python and TensorFlow, with hands-on experience building and deploying AI models. I like turning research-grade models into reliable, shippable products.',
+    'Machine Learning engineer with a solid foundation in deep learning, computer vision, and natural language processing. Proficient in Python and TensorFlow, with hands-on experience building and deploying AI models. I like turning research-grade models into reliable, shippable products.',
   location: 'Sousse, Tunisia',
   email: 'ing.khaledlakhdher@gmail.com',
   phone: '+216 29 843 899',
@@ -163,7 +163,7 @@ export type Education = { degree: string; school: string; period: string; locati
 export const education: Education[] = [
   {
     degree: 'Computer Engineering — AI & Data Science',
-    school: 'IEPI — International Polytechnic School',
+    school: 'EPI — International Polytechnic School',
     period: '2023 — 2026',
     location: 'Sousse, Tunisia',
   },
@@ -185,5 +185,5 @@ export const stats = [
   { value: '30%', label: 'Faster voice-assistant responses' },
   { value: '4', label: 'AI projects shipped end-to-end' },
   { value: '5', label: 'Professional certifications' },
-  { value: '2026', label: 'Graduating — AI & Data Science' },
+  { value: '2026', label: 'AI & Data Science graduate' },
 ]
