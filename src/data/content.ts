@@ -2,7 +2,7 @@ export const profile = {
   name: 'Khaled Lakhdher',
   roles: ['Computer Engineer', 'AI & Data Science', 'Full-Stack AI Developer'],
   tagline:
-    'I build grounded conversational AI, RAG systems, and applied deep-learning products — from model to full-stack deployment.',
+    'I build grounded conversational AI, RAG systems, and applied deep-learning products - from model to full-stack deployment.',
   summary:
     'Machine Learning engineer with a solid foundation in deep learning, computer vision, and natural language processing. Proficient in Python and TensorFlow, with hands-on experience building and deploying AI models. I like turning research-grade models into reliable, shippable products.',
   location: 'Sousse, Tunisia',
@@ -27,9 +27,9 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    role: 'AI Engineer — Final-Year Project (PFE)',
-    company: 'CTT — Carthage Training & Technologies',
-    period: 'Feb 2026 — Jun 2026',
+    role: 'AI Engineer - Final-Year Project (PFE)',
+    company: 'CTT - Carthage Training & Technologies',
+    period: 'Feb 2026 - Jun 2026',
     location: 'Tunisia',
     bullets: [
       'Designed and developed Hotel Mind, a conversational hotel-booking assistant built on a grounded RAG architecture, connected to a real-time SOAP booking API.',
@@ -40,8 +40,8 @@ export const experiences: Experience[] = [
   },
   {
     role: 'AI Developer Intern',
-    company: 'CTT — Carthage Training & Technologies',
-    period: 'Jul 2025 — Sep 2025',
+    company: 'CTT - Carthage Training & Technologies',
+    period: 'Jul 2025 - Sep 2025',
     location: 'Hammamet, Tunisia',
     bullets: [
       'Fine-tuned a Hugging Face NLP model to classify customer reviews by sentiment (positive, negative, neutral).',
@@ -60,22 +60,36 @@ export type Project = {
   featured?: boolean
   github?: string
   demo?: string
+  private?: boolean
 }
 
 export const projects: Project[] = [
   {
-    title: 'Nexus AI — AI-Employee Management Platform',
+    title: 'Nexus AI - AI-Employee Management Platform',
     blurb:
-      'A multi-tenant platform where LLM agents are governed like employees — scoped permissions, vector memory, orchestration, and per-agent cost tracking.',
+      'A multi-tenant platform where LLM agents are governed like employees - scoped permissions, vector memory, orchestration, and per-agent cost tracking.',
     bullets: [
-      'Built a multi-tenant full-stack platform (FastAPI, PostgreSQL/pgvector, Redis, Next.js, TypeScript) where LLM agents are governed like employees: scoped IAM-style permissions enforced at the tool-execution boundary, hierarchical vector memory with semantic recall, and a provider-agnostic model gateway (Anthropic / OpenRouter–Gemini) with per-agent cost tracking.',
+      'Built a multi-tenant full-stack platform (FastAPI, PostgreSQL/pgvector, Redis, Next.js, TypeScript) where LLM agents are governed like employees: scoped IAM-style permissions enforced at the tool-execution boundary, hierarchical vector memory with semantic recall, and a provider-agnostic model gateway (Anthropic / OpenRouter-Gemini) with per-agent cost tracking.',
       'Engineered a multi-agent orchestration engine over a Redis Streams message bus with real-time WebSocket monitoring and an append-only audit log, running live agents for a fraction of a cent per run.',
     ],
     tags: ['FastAPI', 'pgvector', 'Redis Streams', 'Next.js', 'Multi-Agent', 'WebSockets'],
     featured: true,
+    github: 'https://github.com/KhaledLakhdher/startup',
   },
   {
-    title: 'CodeReview-Eval — Benchmarked LLM Code Reviewer',
+    title: 'Steam Player Forecaster - Production MLOps Pipeline',
+    blurb:
+      'A production MLOps pipeline forecasting Steam player counts, with a versioned model registry, drift-triggered retraining, and live monitoring.',
+    bullets: [
+      'Engineered a reproducible ML lifecycle (scikit-learn, MLflow, FastAPI, Pandera, Docker): time-based training, a versioned model registry with @champion promotion, and a registry-backed prediction API with schema-validated inputs.',
+      'Added production monitoring - PSI drift detection with an automated champion/challenger retraining loop (GitHub Actions) and a CI eval gate - plus a Streamlit dashboard and a scheduled collector that keeps the system live.',
+    ],
+    tags: ['MLOps', 'MLflow', 'FastAPI', 'scikit-learn', 'Docker', 'GitHub Actions', 'Streamlit'],
+    featured: true,
+    github: 'https://github.com/KhaledLakhdher/steam-player-mlops',
+  },
+  {
+    title: 'CodeReview-Eval - Benchmarked LLM Code Reviewer',
     blurb:
       'An AI code reviewer with a reproducible evaluation harness that separates localization from diagnosis, showing single-score benchmarks overstate true LLM capability.',
     bullets: [
@@ -84,21 +98,20 @@ export const projects: Project[] = [
     ],
     tags: ['LLM-as-a-Judge', 'Benchmarking', 'Claude API', 'Evaluation', 'Streamlit', 'Python'],
     featured: true,
-    // TODO: replace with your real URLs
-    github: 'https://github.com/KhaledLakhdher/codereview-eval',
-    demo: 'https://codereview-eval.streamlit.app',
+    github: 'https://github.com/KhaledLakhdher/coder_review',
   },
   {
-    title: 'Hotel Mind — Grounded Booking Assistant',
+    title: 'Hotel Mind - Grounded Booking Assistant',
     blurb:
       'A conversational hotel-booking assistant on a grounded RAG architecture, wired to a live SOAP reservation API.',
     bullets: [
       'Grounded RAG pipeline with retrieval scored at nDCG@5 0.82 / MRR@5 0.90.',
-      'Hallucination-mitigation layer verifies every factual claim — no invented prices or bookings.',
+      'Hallucination-mitigation layer verifies every factual claim - no invented prices or bookings.',
       'Containerized full-stack delivery with a real-time booking backend.',
     ],
     tags: ['RAG', 'LLMs', 'Semantic Search', 'Docker', 'SOAP'],
     featured: true,
+    private: true,
   },
   {
     title: 'Personalized Voice Assistant',
@@ -111,6 +124,7 @@ export const projects: Project[] = [
     ],
     tags: ['ASR', 'TTS', 'Voice Cloning', 'Fine-tuning'],
     featured: true,
+    private: true,
   },
   {
     title: 'AI Image Colorization & Code Generation',
@@ -123,6 +137,7 @@ export const projects: Project[] = [
     ],
     tags: ['GANs', 'Pix2Pix', 'Agents', 'Flask'],
     featured: true,
+    private: true,
   },
 ]
 
@@ -181,15 +196,15 @@ export type Education = { degree: string; school: string; period: string; locati
 
 export const education: Education[] = [
   {
-    degree: 'Computer Engineering — AI & Data Science',
-    school: 'EPI — International Polytechnic School',
-    period: '2023 — 2026',
+    degree: 'Computer Engineering - AI & Data Science',
+    school: 'EPI - International Polytechnic School',
+    period: '2023 - 2026',
     location: 'Sousse, Tunisia',
   },
   {
     degree: 'Preparatory Cycle',
-    school: 'EPI — Private International Polytechnic School',
-    period: '2021 — 2023',
+    school: 'EPI - Private International Polytechnic School',
+    period: '2021 - 2023',
     location: 'Sousse, Tunisia',
   },
 ]

@@ -15,7 +15,7 @@ const suggestions = [
 ]
 
 const greeting =
-  "Hi! I'm Khaled's AI assistant, grounded in his CV. Ask me about his experience, projects, or skills — I'll only answer from what's on his portfolio."
+  "Hi! I'm Khaled's AI assistant, grounded in his CV. Ask me about his experience, projects, or skills - I'll only answer from what's on his portfolio."
 
 export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([])
@@ -74,11 +74,11 @@ export default function Chat() {
             <SectionHeader
               eyebrow="AI Assistant"
               title="Chat with my AI"
-              description="A retrieval-grounded assistant that answers from my CV — the same pattern behind my Hotel Mind project, running live on this page."
+              description="A retrieval-grounded assistant that answers from my CV - the same pattern behind my Hotel Mind project, running live on this page."
             />
             <ul className="mt-6 space-y-3">
               {[
-                { icon: Database, text: 'Grounded in my portfolio content — no external data.' },
+                { icon: Database, text: 'Grounded in my portfolio content - no external data.' },
                 { icon: ShieldCheck, text: "Won't invent facts; says so when it doesn't know." },
                 { icon: Sparkles, text: 'Powered by an LLM, with an offline retrieval fallback.' },
               ].map((f) => (

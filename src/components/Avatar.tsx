@@ -27,7 +27,7 @@ export default function Avatar() {
       <div className="relative h-full w-full overflow-hidden rounded-[2.2rem] border border-white/60 bg-white shadow-2xl shadow-navy/15 ring-1 ring-line">
         <img
           src={profile.avatar}
-          alt={`${profile.name} — developer`}
+          alt={`${profile.name} - developer`}
           className="h-full w-full object-cover"
           loading="eager"
           width={380}

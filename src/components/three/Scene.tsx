@@ -6,7 +6,7 @@ import { usePrefersReducedMotion, useIsMobile } from '../../hooks/useMediaQuery'
 
 /**
  * Hero 3D scene. Uses a procedurally-built studio environment (Lightformers)
- * so there is no external HDRI download — fully self-contained and offline-safe.
+ * so there is no external HDRI download - fully self-contained and offline-safe.
  */
 export default function Scene() {
   const reducedMotion = usePrefersReducedMotion()

@@ -1,4 +1,4 @@
-import { ArrowUpRight, Github, ExternalLink } from 'lucide-react'
+import { ArrowUpRight, Github, ExternalLink, Lock } from 'lucide-react'
 import SectionHeader from './ui/SectionHeader'
 import Reveal from './ui/Reveal'
 import { projects } from '../data/content'
@@ -40,8 +40,8 @@ export default function Projects() {
                 </ul>
 
                 <div className="mt-auto pt-5">
-                  {(p.github || p.demo) && (
-                    <div className="mb-3 flex flex-wrap gap-4 text-[13px] font-semibold">
+                  {(p.github || p.demo || p.private) && (
+                    <div className="mb-3 flex flex-wrap items-center gap-4 text-[13px] font-semibold">
                       {p.github && (
                         <a
                           href={p.github}
@@ -51,6 +51,14 @@ export default function Projects() {
                         >
                           <Github size={15} /> GitHub
                         </a>
+                      )}
+                      {!p.github && p.private && (
+                        <span
+                          className="inline-flex items-center gap-1.5 text-muted"
+                          title="Source code is in a private repository"
+                        >
+                          <Lock size={14} /> Private repo
+                        </span>
                       )}
                       {p.demo && (
                         <a

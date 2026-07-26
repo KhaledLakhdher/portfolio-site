@@ -17,15 +17,15 @@ export const chunks: Chunk[] = [
     text: `${profile.name} is a ${profile.roles.join(', ')} based in ${profile.location}. ${profile.summary} ${profile.tagline} Contact: ${profile.email}, LinkedIn ${profile.linkedin}.`,
   },
   ...experiences.map((e) => ({
-    title: `Experience — ${e.role}`,
+    title: `Experience - ${e.role}`,
     text: `${e.role} at ${e.company} (${e.period}, ${e.location}). ${e.bullets.join(' ')} Technologies: ${e.tags.join(', ')}.`,
   })),
   ...projects.map((p) => ({
-    title: `Project — ${p.title}`,
+    title: `Project - ${p.title}`,
     text: `${p.title}. ${p.blurb} ${p.bullets.join(' ')} Stack: ${p.tags.join(', ')}.`,
   })),
   ...skills.map((s) => ({
-    title: `Skills — ${s.label}`,
+    title: `Skills - ${s.label}`,
     text: `${s.label}: ${s.items.join(', ')}.`,
   })),
   {

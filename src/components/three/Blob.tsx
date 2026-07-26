@@ -9,7 +9,7 @@ type BlobProps = {
 }
 
 /**
- * A glossy, gently distorted sphere — the hero focal point.
+ * A glossy, gently distorted sphere - the hero focal point.
  * Rotates slowly on its own and leans subtly toward the pointer.
  */
 export default function Blob({ reducedMotion = false }: BlobProps) {

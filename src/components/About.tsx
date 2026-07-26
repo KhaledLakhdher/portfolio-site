@@ -12,7 +12,7 @@ const focus = [
   {
     icon: Cpu,
     title: 'Deep Learning',
-    body: 'NLP, speech (ASR/TTS), and computer vision — fine-tuning and shipping real models.',
+    body: 'NLP, speech (ASR/TTS), and computer vision - fine-tuning and shipping real models.',
   },
   {
     icon: Boxes,
