@@ -58,6 +58,8 @@ export type Project = {
   bullets: string[]
   tags: string[]
   featured?: boolean
+  github?: string
+  demo?: string
 }
 
 export const projects: Project[] = [
@@ -71,6 +73,20 @@ export const projects: Project[] = [
     ],
     tags: ['FastAPI', 'pgvector', 'Redis Streams', 'Next.js', 'Multi-Agent', 'WebSockets'],
     featured: true,
+  },
+  {
+    title: 'CodeReview-Eval — Benchmarked LLM Code Reviewer',
+    blurb:
+      'An AI code reviewer with a reproducible evaluation harness that separates localization from diagnosis, showing single-score benchmarks overstate true LLM capability.',
+    bullets: [
+      'Built an AI code-review pipeline (Claude API, structured JSON findings) and a reproducible evaluation harness over the BugsInPy benchmark (500 real Python bugs with ground-truth fixes), scoring localization and diagnosis as separate metrics via an LLM-as-judge.',
+      'Showed a single "bug-detection" score overstates true capability ~1.8× (78% localization vs 43% diagnosis), benchmarked 3 model tiers (Opus / Sonnet / Haiku), and shipped an interactive Streamlit demo and published results page.',
+    ],
+    tags: ['LLM-as-a-Judge', 'Benchmarking', 'Claude API', 'Evaluation', 'Streamlit', 'Python'],
+    featured: true,
+    // TODO: replace with your real URLs
+    github: 'https://github.com/KhaledLakhdher/codereview-eval',
+    demo: 'https://codereview-eval.streamlit.app',
   },
   {
     title: 'Hotel Mind — Grounded Booking Assistant',
@@ -132,6 +148,9 @@ export const skills: SkillGroup[] = [
       'Agentic AI',
       'Tool-Calling',
       'Prompt Engineering',
+      'LLM Evaluation',
+      'Benchmarking',
+      'LLM-as-a-Judge',
       'LLMs',
       'NLP',
       'ASR',

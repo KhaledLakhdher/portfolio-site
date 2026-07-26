@@ -1,4 +1,4 @@
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Github, ExternalLink } from 'lucide-react'
 import SectionHeader from './ui/SectionHeader'
 import Reveal from './ui/Reveal'
 import { projects } from '../data/content'
@@ -39,12 +39,38 @@ export default function Projects() {
                   ))}
                 </ul>
 
-                <div className="mt-auto flex flex-wrap gap-1.5 pt-5">
-                  {p.tags.map((t) => (
-                    <span key={t} className="chip">
-                      {t}
-                    </span>
-                  ))}
+                <div className="mt-auto pt-5">
+                  {(p.github || p.demo) && (
+                    <div className="mb-3 flex flex-wrap gap-4 text-[13px] font-semibold">
+                      {p.github && (
+                        <a
+                          href={p.github}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1.5 text-navy transition hover:text-accent"
+                        >
+                          <Github size={15} /> GitHub
+                        </a>
+                      )}
+                      {p.demo && (
+                        <a
+                          href={p.demo}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1.5 text-navy transition hover:text-accent"
+                        >
+                          <ExternalLink size={15} /> Live demo
+                        </a>
+                      )}
+                    </div>
+                  )}
+                  <div className="flex flex-wrap gap-1.5">
+                    {p.tags.map((t) => (
+                      <span key={t} className="chip">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </article>
             </Reveal>

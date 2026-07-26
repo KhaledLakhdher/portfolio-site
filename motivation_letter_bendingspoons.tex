@@ -1,0 +1,72 @@
+%==============================================================
+%  Khaled Lakhdher — Cover Letter
+%  Tailored for: Data role — Bending Spoons (Milan / remote)
+%  Compile with:  pdflatex motivation_letter_bendingspoons.tex
+%
+%  NOTE: confirm the exact job title on the posting and edit \Role below
+%        (their data role is usually "Data Scientist").
+%==============================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}
+\usepackage[margin=2cm,top=1.4cm,bottom=1.5cm]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+\definecolor{accent}{HTML}{2C3E63}
+\definecolor{muted}{HTML}{52606D}
+\hypersetup{colorlinks=true,urlcolor=accent,linkcolor=accent}
+\pagestyle{empty}
+\setlength{\parskip}{7pt}
+
+\newcommand{\Role}{Data Scientist}   % <-- confirm exact title on the posting
+
+\begin{document}
+
+% ---------- Sender header (matches the CV) ----------
+\begin{center}
+  {\LARGE\bfseries\color{accent} Khaled Lakhdher}\\[2pt]
+  {\large\color{muted} AI \& Data Science Engineer}\\[4pt]
+  {\small\color{muted}
+    Sousse, Tunisia \quad|\quad
+    \href{mailto:ing.khaledlakhdher@gmail.com}{ing.khaledlakhdher@gmail.com} \quad|\quad
+    +216 29 843 899 \quad|\quad
+    \href{https://www.linkedin.com/in/khaled-lakhdher}{in/khaled-lakhdher}
+  }\\[2pt]
+  {\small\href{https://khaled-lakhdher-portfolio.vercel.app}{\textbf{\color{accent}khaled-lakhdher-portfolio.vercel.app}}}
+\end{center}
+
+\vspace{4pt}
+{\color{muted!40}\hrule}
+\vspace{10pt}
+
+% ---------- Date & recipient ----------
+\hfill Sousse, \today
+
+\textbf{Bending Spoons}\\
+Hiring Team
+
+\vspace{4pt}
+\textbf{Subject: Application for the \Role\ position}
+
+\vspace{6pt}
+Dear Hiring Team,
+
+I am applying for the \Role\ role at Bending Spoons. I build data systems that are correct, reliable, and genuinely useful, and I work AI-first, weaving machine intelligence into how I reason and build. Your description of a place where ``human judgment and machine intelligence reinforce each other'' is already how I work, and doing it at your bar is exactly the challenge I want.
+
+I treat data correctness as non-negotiable. During my internship at CTT, I built an end-to-end pipeline over thousands of customer records: I preprocessed, cleaned, and validated the data, then structured and modeled it, and automated the export of the results into reports that non-technical teams could act on directly. Across my engineering projects I evaluate systems against formal metrics such as nDCG and MRR, and I build validation layers that verify every output before it is trusted. Defining metrics, validating data, and hardening the robustness of reporting is precisely the kind of work I gravitate toward.
+
+I also like building the tooling that other people rely on. I designed \textbf{Nexus AI}, a multi-tenant platform that stores, organizes, and serves structured and vector data (FastAPI, PostgreSQL/pgvector, Redis Streams) with real-time monitoring and per-run cost tracking: internal data tooling built for scale. I move comfortably across diverse stacks (Python, FastAPI, Django, Next.js, PostgreSQL/pgvector, Redis, Docker), and I use AI tools every day to move faster, surface ideas, and study how competing products work, including building my own portfolio's grounded AI assistant, which answers only from verified data.
+
+I try to reason from first principles, hold myself to a rising bar, and get my hands dirty for the team. I am early in my career, but I took your note to heart: that potential and verifiable ability matter more than a perfect CV. I would rather be measured by what I can do than by years on paper, and I would welcome your tests as the chance to show exactly that.
+
+I would be thrilled to contribute to Bending Spoons and to grow at the rate you promise talented people. Thank you for your time and consideration.
+
+\vspace{6pt}
+Sincerely,\\[10pt]
+\textbf{Khaled Lakhdher}
+
+\end{document}
