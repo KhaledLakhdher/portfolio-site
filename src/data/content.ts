@@ -4,7 +4,7 @@ export const profile = {
   tagline:
     'I build grounded conversational AI, RAG systems, and applied deep-learning products - from model to full-stack deployment.',
   summary:
-    'Machine Learning engineer with a solid foundation in deep learning, computer vision, and natural language processing. Proficient in Python and TensorFlow, with hands-on experience building and deploying AI models. I like turning research-grade models into reliable, shippable products.',
+    'AI and data engineer who turns models and data into dependable products. I build LLM and RAG systems, multi-agent platforms, and end-to-end ML pipelines, with a metrics-first focus on data quality, evaluation, and clean deployment. Comfortable across the stack: Python, SQL, FastAPI, and Docker.',
   location: 'Sousse, Tunisia',
   email: 'ing.khaledlakhdher@gmail.com',
   phone: '+216 29 843 899',
@@ -27,7 +27,7 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    role: 'AI Engineer - Final-Year Project (PFE)',
+    role: 'AI Engineer - Final Year Project (Graduation)',
     company: 'CTT - Carthage Training & Technologies',
     period: 'Feb 2026 - Jun 2026',
     location: 'Tunisia',
@@ -44,9 +44,9 @@ export const experiences: Experience[] = [
     period: 'Jul 2025 - Sep 2025',
     location: 'Hammamet, Tunisia',
     bullets: [
-      'Fine-tuned a Hugging Face NLP model to classify customer reviews by sentiment (positive, negative, neutral).',
-      'Built a Django backend to manage customer data and automate export of results to Excel for reporting.',
-      'Handled all preprocessing, training, and integration scripts in Python.',
+      'Fine-tuned a Hugging Face NLP model to classify customer reviews into three sentiment classes (positive, negative, neutral), improving accuracy by 25% over the pre-trained baseline.',
+      'Built a Django backend to manage customer data and automate export of analysis results to Excel for reporting.',
+      'Owned the end-to-end Python pipeline for preprocessing, training, and integration.',
     ],
     tags: ['NLP', 'Hugging Face', 'Django', 'Python'],
   },
@@ -65,11 +65,11 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: 'Nexus AI - AI-Employee Management Platform',
+    title: 'Nexus AI - Artificial Intelligence Employee Management Platform',
     blurb:
       'A multi-tenant platform where LLM agents are governed like employees - scoped permissions, vector memory, orchestration, and per-agent cost tracking.',
     bullets: [
-      'Built a multi-tenant full-stack platform (FastAPI, PostgreSQL/pgvector, Redis, Next.js, TypeScript) where LLM agents are governed like employees: scoped IAM-style permissions enforced at the tool-execution boundary, hierarchical vector memory with semantic recall, and a provider-agnostic model gateway (Anthropic / OpenRouter-Gemini) with per-agent cost tracking.',
+      'Engineered a multi-tenant full-stack platform (FastAPI, PostgreSQL/pgvector, Redis, Next.js, TypeScript) where LLM agents are governed like employees: scoped IAM-style permissions enforced at the tool-execution boundary, hierarchical vector memory with semantic recall, and a provider-agnostic model gateway (Anthropic / OpenRouter-Gemini) with per-agent cost tracking.',
       'Engineered a multi-agent orchestration engine over a Redis Streams message bus with real-time WebSocket monitoring and an append-only audit log, running live agents for a fraction of a cent per run.',
     ],
     tags: ['FastAPI', 'pgvector', 'Redis Streams', 'Next.js', 'Multi-Agent', 'WebSockets'],
@@ -89,11 +89,11 @@ export const projects: Project[] = [
     github: 'https://github.com/KhaledLakhdher/steam-player-mlops',
   },
   {
-    title: 'CodeReview-Eval - Benchmarked LLM Code Reviewer',
+    title: 'CodeReview Evaluation - Benchmarked LLM Code Reviewer',
     blurb:
       'An AI code reviewer with a reproducible evaluation harness that separates localization from diagnosis, showing single-score benchmarks overstate true LLM capability.',
     bullets: [
-      'Built an AI code-review pipeline (Claude API, structured JSON findings) and a reproducible evaluation harness over the BugsInPy benchmark (500 real Python bugs with ground-truth fixes), scoring localization and diagnosis as separate metrics via an LLM-as-judge.',
+      'Developed an AI code-review pipeline (Claude API, structured JSON findings) and a reproducible evaluation harness over the BugsInPy benchmark (500 real Python bugs with ground-truth fixes), scoring localization and diagnosis as separate metrics via an LLM-as-judge.',
       'Showed a single "bug-detection" score overstates true capability ~1.8× (78% localization vs 43% diagnosis), benchmarked 3 model tiers (Opus / Sonnet / Haiku), and shipped an interactive Streamlit demo and published results page.',
     ],
     tags: ['LLM-as-a-Judge', 'Benchmarking', 'Claude API', 'Evaluation', 'Streamlit', 'Python'],
@@ -150,32 +150,30 @@ export const skills: SkillGroup[] = [
   },
   {
     label: 'AI Libraries & Frameworks',
-    items: ['Transformers', 'PyTorch', 'TensorFlow', 'Keras', 'Hugging Face', 'Hugging Face Hub', 'scikit-learn', 'Pandas', 'NumPy', 'Matplotlib'],
+    items: ['Transformers', 'PyTorch', 'TensorFlow', 'Keras', 'Hugging Face', 'scikit-learn', 'Pandas', 'NumPy', 'Matplotlib'],
   },
   {
     label: 'Frameworks & Tools',
-    items: ['Gradio', 'Streamlit', 'Flask', 'Django', 'Zeep', 'LangSmith', 'Pydantic', 'Docker Compose', 'Nginx', 'Postman', 'Git', 'GitHub'],
+    items: ['Gradio', 'Streamlit', 'Flask', 'Django', 'Zeep', 'LangSmith', 'Docker Compose', 'Postman', 'Git', 'GitHub'],
   },
   {
     label: 'Concepts & Technologies',
     items: [
+      'RAG',
+      'Retrieval-Augmented Generation',
       'AI Agents',
       'Agentic AI',
       'Tool-Calling',
       'Prompt Engineering',
       'LLM Evaluation',
-      'Benchmarking',
       'LLM-as-a-Judge',
       'LLMs',
       'NLP',
       'ASR',
       'GANs',
-      'Vector Databases',
       'Semantic Search',
       'Embeddings',
-      'Information Retrieval',
       'Deep Learning',
-      'API Development',
       'NoSQL',
       'Cloud Computing',
     ],
@@ -213,11 +211,4 @@ export const languages = [
   { language: 'French', level: 'DELF B2' },
   { language: 'English', level: 'TOEIC 825/990' },
   { language: 'Arabic', level: 'Native' },
-]
-
-export const stats = [
-  { value: '30%', label: 'Faster voice-assistant responses' },
-  { value: '4', label: 'AI projects shipped end-to-end' },
-  { value: '5', label: 'Professional certifications' },
-  { value: '2026', label: 'AI & Data Science graduate' },
 ]

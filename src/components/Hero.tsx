@@ -108,7 +108,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll cue */}
-      <div className="pointer-events-none absolute bottom-6 left-1/2 -translate-x-1/2">
+      <div className="pointer-events-none absolute bottom-1 left-1/2 -translate-x-1/2">
         <div className="flex h-9 w-5 items-start justify-center rounded-full border border-muted/40 p-1">
           <div className="h-2 w-1 animate-float rounded-full bg-muted/60" />
         </div>

@@ -9,10 +9,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 \usepackage{charter}                 % police serif proche de l'original
-\usepackage[margin=0.95cm,top=0.6cm,bottom=0.5cm]{geometry}
+\usepackage[margin=1.15cm,top=0.8cm,bottom=0.7cm]{geometry}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{titlesec}
 \usepackage{enumitem}
+\usepackage{fontawesome5}
 \usepackage{hyperref}
 
 % ---------- Couleurs ----------
@@ -25,14 +26,19 @@
 \titleformat{\section}
   {\color{accent}\bfseries\large\scshape}
   {}{0em}{}[{\color{muted!40}\titlerule[0.8pt]}]
-\titlespacing*{\section}{0pt}{4pt}{2pt}
+\titlespacing*{\section}{0pt}{3pt}{1pt}
 
 % ---------- Style des listes ----------
 \setlist[itemize]{leftmargin=1.3em,itemsep=0.5pt,topsep=1pt,parsep=0pt,label=\textbullet}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\linespread{0.92}
+\linespread{0.85}
+
+% ---------- Coupures de ligne : éviter les césures moches ----------
+\exhyphenpenalty=10000
+\hyphenation{assistant}
+\emergencystretch=2em
 
 % ---------- Aides ----------
 \newcommand{\entry}[2]{\textbf{#1}\hfill{\small\color{muted}#2}\par}
@@ -41,25 +47,26 @@
 
 %==============================================================
 \begin{document}
+\raggedright   % texte aligné à gauche : pas d'espaces inter-mots étirés
 
 % ---------- En-tête ----------
 \begin{center}
   {\LARGE\bfseries\color{accent} Khaled Lakhdher}\\[3pt]
   {\large\color{muted} Ingénieur en Informatique \;|\; IA \& Data Science \;|\; Développeur IA Full-Stack}\\[5pt]
   {\small\color{muted}
-    Sousse, Tunisie \quad|\quad
-    \href{mailto:ing.khaledlakhdher@gmail.com}{ing.khaledlakhdher@gmail.com} \quad|\quad
-    +216 29 843 899 \quad|\quad
-    \href{https://www.linkedin.com/in/khaled-lakhdher}{in/khaled-lakhdher}
+    {\color{accent}\faMapMarker}~Sousse, Tunisie \quad
+    {\color{accent}\faEnvelope}~\href{mailto:ing.khaledlakhdher@gmail.com}{ing.khaledlakhdher@gmail.com} \quad
+    {\color{accent}\faPhone}~+216 29 843 899 \quad
+    {\color{accent}\faLinkedin}~\href{https://www.linkedin.com/in/khaled-lakhdher}{in/khaled-lakhdher}
   }\\[3pt]
-  {\small\href{https://khaled-lakhdher-portfolio.vercel.app}{\textbf{\color{accent}Portfolio : khaled-lakhdher-portfolio.vercel.app}}}
+  {\small {\color{accent}\faGlobe}~\href{https://khaled-lakhdher-portfolio.vercel.app}{\textbf{\color{accent}khaled-lakhdher-portfolio.vercel.app}}}
 \end{center}
 
 % ---------- Profil ----------
 \section{Profil}
-Ingénieur passionné en Machine Learning, avec une solide base en deep learning, vision par ordinateur
-et NLP. Maîtrise de Python et TensorFlow et expérience pratique du développement et du déploiement de
-modèles d'IA, motivé à contribuer à des solutions innovantes en intelligence artificielle.
+Ingénieur IA et data qui transforme les modèles et les données en produits fiables. Je conçois des systèmes
+LLM et RAG, des plateformes multi-agents et des pipelines ML de bout en bout, avec une approche centrée sur la
+qualité des données, l'évaluation et un déploiement propre. À l'aise sur toute la stack : Python, SQL, FastAPI, Docker.
 
 % ---------- Expérience ----------
 \section{Expérience}
@@ -73,7 +80,7 @@ modèles d'IA, motivé à contribuer à des solutions innovantes en intelligence
 \entry{Stagiaire Développeur en Intelligence Artificielle}{Juil. 2025 - Sept. 2025 \textperiodcentered\ Hammamet}
 \org{CTT - Carthage Training \& Technologies}
 \begin{itemize}
-  \item Fine-tuning d'un modèle NLP Hugging Face pour classifier les avis clients par sentiment (positif, négatif, neutre).
+  \item Fine-tuning d'un modèle NLP Hugging Face pour classifier les avis clients en trois sentiments, améliorant la précision de 25\,\% par rapport au modèle de base.
   \item Développement d'un backend Django pour gérer les données clients et automatiser l'export des résultats vers Excel pour le reporting.
   \item Réalisation de l'ensemble des scripts de prétraitement, d'entraînement et d'intégration en Python.
 \end{itemize}
@@ -81,7 +88,7 @@ modèles d'IA, motivé à contribuer à des solutions innovantes en intelligence
 % ---------- Projets ----------
 \section{Projets}
 
-\proj{Nexus AI - Plateforme de Gestion d'Employés IA}
+\proj{Nexus AI - Plateforme de Gestion d'Employés en Intelligence Artificielle}
 \begin{itemize}
   \item Plateforme multi-tenant (FastAPI, PostgreSQL/pgvector, Redis, Next.js) pilotant des agents LLM avec
         permissions IAM, mémoire vectorielle, orchestration multi-agents (bus Redis) et supervision temps réel
@@ -94,7 +101,7 @@ modèles d'IA, motivé à contribuer à des solutions innovantes en intelligence
         assistant vocal personnalisé, réduisant le temps de réponse de 30\,\%.
 \end{itemize}
 
-\proj{CodeReview-Eval - Évaluation d'un Réviseur de Code LLM}
+\proj{CodeReview Evaluation - Réviseur de Code LLM Benchmarké}
 \begin{itemize}
   \item Développement d'un framework de revue de code et d'évaluation LLM sur le benchmark BugsInPy
         (500 bugs réels) ; via un LLM-as-judge, démonstration qu'un score de détection unique surestime la
@@ -112,13 +119,15 @@ modèles d'IA, motivé à contribuer à des solutions innovantes en intelligence
 
 % ---------- Compétences ----------
 \section{Compétences}
-\textbf{\color{accent}Langages de programmation :} Python \textperiodcentered\ Java \textperiodcentered\ C \textperiodcentered\ SQL \textperiodcentered\ JavaScript \textperiodcentered\ TypeScript \textperiodcentered\ React.js \textperiodcentered\ React Native \textperiodcentered\ HTML/CSS \textperiodcentered\ Tailwind CSS\par
-\smallskip
-\textbf{\color{accent}Bibliothèques \& Frameworks IA :} Transformers \textperiodcentered\ PyTorch \textperiodcentered\ TensorFlow \textperiodcentered\ Keras \textperiodcentered\ Hugging Face \textperiodcentered\ Hugging Face Hub \textperiodcentered\ scikit-learn \textperiodcentered\ Pandas \textperiodcentered\ NumPy \textperiodcentered\ Matplotlib\par
-\smallskip
-\textbf{\color{accent}Frameworks \& Outils de Développement :} Gradio \textperiodcentered\ Streamlit \textperiodcentered\ Flask \textperiodcentered\ Django \textperiodcentered\ Zeep \textperiodcentered\ LangSmith \textperiodcentered\ Pydantic \textperiodcentered\ Docker Compose \textperiodcentered\ Nginx / Reverse Proxy \textperiodcentered\ Postman \textperiodcentered\ Git \textperiodcentered\ GitHub\par
-\smallskip
-\textbf{\color{accent}Concepts \& Technologies :} Intelligence Artificielle (IA) \textperiodcentered\ Machine Learning (ML) \textperiodcentered\ Deep Learning (DL) \textperiodcentered\ Large Language Models (LLMs) \textperiodcentered\ Agents IA \textperiodcentered\ IA Agentique \textperiodcentered\ Tool-Calling \textperiodcentered\ Prompt Engineering \textperiodcentered\ LLM Evaluation \textperiodcentered\ Benchmarking \textperiodcentered\ LLM-as-a-Judge \textperiodcentered\ NLP \textperiodcentered\ ASR \textperiodcentered\ GANs \textperiodcentered\ Bases de Données Vectorielles \textperiodcentered\ Recherche Sémantique \textperiodcentered\ Embeddings \textperiodcentered\ Recherche d'Information \textperiodcentered\ Développement d'API \textperiodcentered\ NoSQL \textperiodcentered\ Cloud Computing\par
+\textbf{\color{accent}Langages de programmation :} Python \textperiodcentered\ Java \textperiodcentered\ C \textperiodcentered\ SQL \textperiodcentered\ JavaScript \textperiodcentered\ TypeScript\par
+\vspace{1.5pt}
+\textbf{\color{accent}Technologies Frontend :} React.js \textperiodcentered\ React Native \textperiodcentered\ HTML/CSS \textperiodcentered\ Tailwind CSS\par
+\vspace{1.5pt}
+\textbf{\color{accent}Bibliothèques \& Frameworks IA :} Transformers \textperiodcentered\ PyTorch \textperiodcentered\ TensorFlow \textperiodcentered\ Keras \textperiodcentered\ Hugging Face \textperiodcentered\ scikit-learn \textperiodcentered\ Pandas \textperiodcentered\ NumPy \textperiodcentered\ Matplotlib\par
+\vspace{1.5pt}
+\textbf{\color{accent}Frameworks \& Outils de Développement :} Gradio \textperiodcentered\ Streamlit \textperiodcentered\ Flask \textperiodcentered\ Django \textperiodcentered\ Zeep \textperiodcentered\ LangSmith \textperiodcentered\ Docker \textperiodcentered\ Postman \textperiodcentered\ Git \textperiodcentered\ GitHub\par
+\vspace{1.5pt}
+\textbf{\color{accent}Concepts \& Technologies :} Intelligence Artificielle (IA) \textperiodcentered\ Machine Learning (ML) \textperiodcentered\ Deep Learning (DL) \textperiodcentered\ Large Language Models (LLMs) \textperiodcentered\ RAG (Retrieval-Augmented Generation) \textperiodcentered\ Agents IA \textperiodcentered\ IA Agentique \textperiodcentered\ Tool Calling \textperiodcentered\ Prompt Engineering \textperiodcentered\ LLM Evaluation \textperiodcentered\ LLM-as-a-Judge \textperiodcentered\ Traitement du Langage Naturel (NLP) \textperiodcentered\ Reconnaissance Vocale Automatique (ASR) \textperiodcentered\ GANs \textperiodcentered\ Recherche Sémantique \textperiodcentered\ Embeddings \textperiodcentered\ Bases de Données NoSQL \textperiodcentered\ Cloud Computing\par
 
 % ---------- Formation ----------
 \section{Formation}

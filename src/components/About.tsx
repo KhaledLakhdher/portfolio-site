@@ -1,7 +1,7 @@
 import { Cpu, Boxes, MessagesSquare } from 'lucide-react'
 import SectionHeader from './ui/SectionHeader'
 import Reveal from './ui/Reveal'
-import { profile, stats } from '../data/content'
+import { profile } from '../data/content'
 
 const focus = [
   {
@@ -44,17 +44,6 @@ export default function About() {
             </Reveal>
           ))}
         </div>
-
-        <Reveal delay={0.1}>
-          <dl className="mt-4 grid grid-cols-2 gap-4 rounded-2xl border border-line bg-white/60 p-6 sm:grid-cols-4">
-            {stats.map((s) => (
-              <div key={s.label}>
-                <dt className="text-3xl font-extrabold tracking-tight text-navy">{s.value}</dt>
-                <dd className="mt-1 text-xs leading-snug text-muted">{s.label}</dd>
-              </div>
-            ))}
-          </dl>
-        </Reveal>
       </div>
     </section>
   )

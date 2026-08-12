@@ -3,7 +3,7 @@ import { profile } from '../data/content'
 
 export default function Footer() {
   return (
-    <footer className="border-t border-line py-10">
+    <footer className="border-t border-line py-5">
       <div className="container-x flex flex-col items-center justify-between gap-4 sm:flex-row">
         <p className="text-sm text-muted">
           © {new Date().getFullYear()} {profile.name}. Built with React, Three.js &amp; Tailwind.

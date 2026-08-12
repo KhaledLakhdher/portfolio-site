@@ -8,10 +8,11 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{charter}                 % serif font close to the original
-\usepackage[margin=0.95cm,top=0.6cm,bottom=0.5cm]{geometry}
+\usepackage[margin=1.15cm,top=0.8cm,bottom=0.7cm]{geometry}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{titlesec}
 \usepackage{enumitem}
+\usepackage{fontawesome5}         % contact icons
 \usepackage{hyperref}
 
 % ---------- Colors ----------
@@ -24,14 +25,19 @@
 \titleformat{\section}
   {\color{accent}\bfseries\large\scshape}
   {}{0em}{}[{\color{muted!40}\titlerule[0.8pt]}]
-\titlespacing*{\section}{0pt}{5pt}{2pt}
+\titlespacing*{\section}{0pt}{4pt}{2pt}
 
 % ---------- List style ----------
 \setlist[itemize]{leftmargin=1.3em,itemsep=0.5pt,topsep=1pt,parsep=0pt,label=\textbullet}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\linespread{0.94}
+\linespread{0.9}
+
+% ---------- Line-breaking: avoid ugly mid-word / hyphen splits ----------
+\exhyphenpenalty=10000          % never break at existing hyphens (e.g. LLM-as-a-Judge)
+\hyphenation{assistant}         % never auto-hyphenate this word
+\emergencystretch=2em           % prevent overfull lines the above could cause
 
 % ---------- Helper: role line with right-aligned date ----------
 \newcommand{\entry}[2]{\textbf{#1}\hfill{\small\color{muted}#2}\par}
@@ -40,30 +46,30 @@
 
 %==============================================================
 \begin{document}
+\raggedright   % left-align body text: no stretched inter-word spaces
 
 % ---------- Header ----------
 \begin{center}
   {\LARGE\bfseries\color{accent} Khaled Lakhdher}\\[3pt]
   {\large\color{muted} Computer Engineer \;|\; AI \& Data Science \;|\; Full-Stack AI Developer}\\[5pt]
   {\small\color{muted}
-    Sousse, Tunisia \quad|\quad
-    \href{mailto:ing.khaledlakhdher@gmail.com}{ing.khaledlakhdher@gmail.com} \quad|\quad
-    +216 29 843 899 \quad|\quad
-    \href{https://www.linkedin.com/in/khaled-lakhdher}{in/khaled-lakhdher}
+    {\color{accent}\faMapMarker}~Sousse, Tunisia \quad
+    {\color{accent}\faEnvelope}~\href{mailto:ing.khaledlakhdher@gmail.com}{ing.khaledlakhdher@gmail.com} \quad
+    {\color{accent}\faPhone}~+216 29 843 899 \quad
+    {\color{accent}\faLinkedin}~\href{https://www.linkedin.com/in/khaled-lakhdher}{in/khaled-lakhdher}
   }\\[3pt]
-  {\small\href{https://khaled-lakhdher-portfolio.vercel.app}{\textbf{\color{accent}Portfolio: khaled-lakhdher-portfolio.vercel.app}}}
+  {\small {\color{accent}\faGlobe}~\href{https://khaled-lakhdher-portfolio.vercel.app}{\textbf{\color{accent}khaled-lakhdher-portfolio.vercel.app}}}
 \end{center}
 
 % ---------- Profile ----------
 \section{Profile}
-Passionate Machine Learning engineer with a solid foundation in deep learning,
-computer vision, and natural language processing. Proficient in Python and TensorFlow, with
-hands-on experience building and deploying AI models. Eager to apply my skills to real-world
-challenges and contribute to innovative artificial intelligence solutions.
+AI and data engineer who turns models and data into dependable products. I build LLM and RAG systems,
+multi-agent platforms, and end-to-end ML pipelines, with a metrics-first focus on data quality,
+evaluation, and clean deployment. Comfortable across the stack: Python, SQL, FastAPI, and Docker.
 
 % ---------- Experience ----------
 \section{Experience}
-\entry{AI Engineer - Final-Year Project (PFE)}{Feb 2026 - June 2026 \textperiodcentered\ Tunisia}
+\entry{AI Engineer - Final Year Project (Graduation)}{Feb 2026 - June 2026 \textperiodcentered\ Tunisia}
 \org{CTT - Carthage Training \& Technologies}
 \begin{itemize}
   \item Designed and developed \textbf{Hotel Mind}, a conversational hotel-booking assistant on a grounded RAG architecture connected to a real-time SOAP API, with a hallucination-mitigation layer that verifies every factual claim.
@@ -73,17 +79,17 @@ challenges and contribute to innovative artificial intelligence solutions.
 \entry{Artificial Intelligence Developer Intern}{July 2025 - September 2025 \textperiodcentered\ Hammamet}
 \org{CTT - Carthage Training \& Technologies}
 \begin{itemize}
-  \item Fine-tuned a Hugging Face NLP model to classify customer reviews by sentiment (positive, negative, neutral).
-  \item Built a Django backend to manage customer data and automate export of results to Excel for reporting.
-  \item Handled all preprocessing, training, and integration scripts in Python.
+  \item Fine-tuned a Hugging Face NLP model to classify customer reviews into three sentiment classes, improving accuracy by 25\% over the baseline.
+  \item Built a Django backend to manage customer data and automate export of analysis results to Excel for reporting.
+  \item Owned the end-to-end Python pipeline for preprocessing, training, and integration.
 \end{itemize}
 
 % ---------- Projects ----------
 \section{Projects}
 
-\proj{Nexus AI - AI-Employee Management Platform}
+\proj{Nexus AI - Artificial Intelligence Employee Management Platform}
 \begin{itemize}
-  \item Built a multi-tenant platform (FastAPI, PostgreSQL/pgvector, Redis, Next.js) governing LLM agents
+  \item Engineered a multi-tenant platform (FastAPI, PostgreSQL/pgvector, Redis, Next.js) governing LLM agents
         with IAM permissions, vector memory, multi-agent orchestration over a Redis message bus, and
         real-time WebSocket monitoring, behind a provider-agnostic model gateway (Anthropic, OpenRouter, Gemini).
 \end{itemize}
@@ -94,9 +100,9 @@ challenges and contribute to innovative artificial intelligence solutions.
         voice assistant, cutting response time by 30\%.
 \end{itemize}
 
-\proj{CodeReview-Eval - Benchmarked LLM Code Reviewer}
+\proj{CodeReview Evaluation - Benchmarked LLM Code Reviewer}
 \begin{itemize}
-  \item Built an LLM code-review and evaluation framework on the BugsInPy benchmark (500 real bugs); using
+  \item Developed an LLM code-review and evaluation framework on the BugsInPy benchmark (500 real bugs); using
         an LLM-as-judge, showed a single detection score overstates capability by $\sim$1.8$\times$
         (78\% localization vs.\ 43\% diagnosis) across 3 model tiers, with a live Streamlit demo.
 \end{itemize}
@@ -111,13 +117,15 @@ challenges and contribute to innovative artificial intelligence solutions.
 
 % ---------- Skills ----------
 \section{Skills}
-\textbf{\color{accent}Programming Languages:} Python \textperiodcentered\ Java \textperiodcentered\ C \textperiodcentered\ SQL \textperiodcentered\ JavaScript \textperiodcentered\ TypeScript \textperiodcentered\ React.js \textperiodcentered\ React Native \textperiodcentered\ HTML/CSS \textperiodcentered\ Tailwind CSS\par
+\textbf{\color{accent}Programming Languages:} Python \textperiodcentered\ Java \textperiodcentered\ C \textperiodcentered\ SQL \textperiodcentered\ JavaScript \textperiodcentered\ TypeScript\par
 \smallskip
-\textbf{\color{accent}AI Libraries \& Frameworks:} Transformers \textperiodcentered\ PyTorch \textperiodcentered\ TensorFlow \textperiodcentered\ Keras \textperiodcentered\ Hugging Face \textperiodcentered\ Hugging Face Hub \textperiodcentered\ scikit-learn \textperiodcentered\ Pandas \textperiodcentered\ NumPy \textperiodcentered\ Matplotlib\par
+\textbf{\color{accent}Frontend Technologies:} React.js \textperiodcentered\ React Native \textperiodcentered\ HTML/CSS \textperiodcentered\ Tailwind CSS\par
 \smallskip
-\textbf{\color{accent}Development Frameworks \& Tools:} Gradio \textperiodcentered\ Streamlit \textperiodcentered\ Flask \textperiodcentered\ Django \textperiodcentered\ Zeep \textperiodcentered\ LangSmith \textperiodcentered\ Pydantic \textperiodcentered\ Docker Compose \textperiodcentered\ Nginx / Reverse Proxy \textperiodcentered\ Postman \textperiodcentered\ Git \textperiodcentered\ GitHub\par
+\textbf{\color{accent}AI Libraries \& Frameworks:} Transformers \textperiodcentered\ PyTorch \textperiodcentered\ TensorFlow \textperiodcentered\ Keras \textperiodcentered\ Hugging Face \textperiodcentered\ scikit-learn \textperiodcentered\ Pandas \textperiodcentered\ NumPy \textperiodcentered\ Matplotlib\par
 \smallskip
-\textbf{\color{accent}Concepts \& Technologies:} Artificial Intelligence (AI) \textperiodcentered\ Machine Learning (ML) \textperiodcentered\ Deep Learning (DL) \textperiodcentered\ Large Language Models (LLMs) \textperiodcentered\ AI Agents \textperiodcentered\ Agentic AI \textperiodcentered\ Tool-Calling \textperiodcentered\ Prompt Engineering \textperiodcentered\ LLM Evaluation \textperiodcentered\ Benchmarking \textperiodcentered\ LLM-as-a-Judge \textperiodcentered\ NLP \textperiodcentered\ ASR \textperiodcentered\ GANs \textperiodcentered\ Vector Databases \textperiodcentered\ Semantic Search \textperiodcentered\ Embeddings \textperiodcentered\ Information Retrieval \textperiodcentered\ API Development \textperiodcentered\ NoSQL \textperiodcentered\ Cloud Computing\par
+\textbf{\color{accent}Development Frameworks \& Tools:} Gradio \textperiodcentered\ Streamlit \textperiodcentered\ Flask \textperiodcentered\ Django \textperiodcentered\ Zeep \textperiodcentered\ LangSmith \textperiodcentered\ Docker \textperiodcentered\ Postman \textperiodcentered\ Git \textperiodcentered\ GitHub\par
+\smallskip
+\textbf{\color{accent}Concepts \& Technologies:} Artificial Intelligence (AI) \textperiodcentered\ Machine Learning (ML) \textperiodcentered\ Deep Learning (DL) \textperiodcentered\ Large Language Models (LLMs) \textperiodcentered\ RAG (Retrieval-Augmented Generation) \textperiodcentered\ AI Agents \textperiodcentered\ Agentic AI \textperiodcentered\ Tool Calling \textperiodcentered\ Prompt Engineering \textperiodcentered\ LLM Evaluation \textperiodcentered\ LLM-as-a-Judge \textperiodcentered\ Natural Language Processing (NLP) \textperiodcentered\ Automatic Speech Recognition (ASR) \textperiodcentered\ GANs \textperiodcentered\ Semantic Search \textperiodcentered\ Embeddings \textperiodcentered\ NoSQL Databases \textperiodcentered\ Cloud Computing\par
 
 % ---------- Education ----------
 \section{Education}
