@@ -62,15 +62,17 @@ Email: ing.khaledlakhdher@gmail.com
 **Location:** Tunisia
 
 ```
-Designed and built Hotel Mind, a conversational hotel-booking assistant on a
-grounded RAG architecture connected to a real-time SOAP reservation API.
+Designed and built Hotel Mind, a multilingual, multi-agent hotel search and
+booking assistant: 9 LangChain/LangGraph agents call 32+ tools across 10 real
+SOAP endpoints for live hotel, room, and pricing data.
 
-• Engineered a hallucination-mitigation layer that verifies every factual claim,
-  ensuring the assistant never invents a price or a booking.
-• Delivered a containerized full-stack solution reaching nDCG@5 0.82, MRR@5 0.90,
-  and a 100% success rate on a benchmark query set.
+• Grounded every answer in live tool output rather than model memory, so the
+  assistant never invents a price, a room, or a booking.
+• Built a hybrid booking flow: AI-driven search hands off to a guest-detail
+  form and a sandboxed SOAP reservation, on a full-stack FastAPI + Next.js
+  app with LangSmith tracing.
 
-Stack: RAG, LLMs, Semantic Search, Docker, SOAP
+Stack: LangChain, LangGraph, Multi-Agent, FastAPI, Next.js, SOAP
 ```
 
 ---
@@ -138,13 +140,14 @@ Stack: LLM-as-a-Judge, Benchmarking, Claude API, Evaluation, Streamlit, Python
 GitHub: https://github.com/KhaledLakhdher/coder_review
 ```
 
-**4. Hotel Mind — Grounded Booking Assistant**
+**4. Hotel Mind — Multi-Agent Travel Assistant**
 ```
-A conversational hotel-booking assistant on a grounded RAG architecture, wired
-to a live SOAP reservation API, with a hallucination-mitigation layer and
-containerized full-stack delivery. nDCG@5 0.82 / MRR@5 0.90.
+A multilingual, multi-agent hotel search and booking assistant grounded
+entirely in live SOAP data: 9 LangChain/LangGraph agents, 32+ tools, 10 real
+endpoints, and a hybrid flow that hands guest details to a real form before a
+sandboxed reservation.
 
-Stack: RAG, LLMs, Semantic Search, Docker, SOAP
+Stack: LangChain, LangGraph, Multi-Agent, FastAPI, Next.js, SOAP
 ```
 
 **5. Personalized Voice Assistant**

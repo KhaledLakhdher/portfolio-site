@@ -32,11 +32,10 @@ export const experiences: Experience[] = [
     period: 'Feb 2026 - Jun 2026',
     location: 'Tunisia',
     bullets: [
-      'Designed and developed Hotel Mind, a conversational hotel-booking assistant built on a grounded RAG architecture, connected to a real-time SOAP booking API.',
-      'Delivered a containerized full-stack solution achieving nDCG@5 of 0.82, MRR@5 of 0.90, and a 100% success rate on a benchmark query set.',
-      'Built a hallucination-mitigation layer that verifies every factual claim, ensuring the assistant never invents a price or a booking.',
+      'Designed and developed Hotel Mind, a multilingual, multi-agent hotel search and booking assistant: 9 LangChain/LangGraph agents call 32+ tools across 10 real SOAP endpoints for live hotel, room, and pricing data.',
+      'Grounded every answer in live tool output rather than model memory, and built a hybrid booking flow (AI search, a guest-detail form, and a sandboxed SOAP reservation) on a full-stack FastAPI + Next.js app with LangSmith tracing.',
     ],
-    tags: ['RAG', 'LLMs', 'Agents', 'SOAP API', 'Docker', 'Information Retrieval'],
+    tags: ['LangChain', 'LangGraph', 'Multi-Agent', 'SOAP APIs', 'FastAPI', 'Next.js'],
   },
   {
     role: 'AI Developer Intern',
@@ -101,15 +100,14 @@ export const projects: Project[] = [
     github: 'https://github.com/KhaledLakhdher/coder_review',
   },
   {
-    title: 'Hotel Mind - Grounded Booking Assistant',
+    title: 'Hotel Mind - Multi-Agent Travel Assistant',
     blurb:
-      'A conversational hotel-booking assistant on a grounded RAG architecture, wired to a live SOAP reservation API.',
+      'A multilingual, multi-agent hotel search and booking assistant grounded entirely in live SOAP data, so it never invents a price, a room, or a booking.',
     bullets: [
-      'Grounded RAG pipeline with retrieval scored at nDCG@5 0.82 / MRR@5 0.90.',
-      'Hallucination-mitigation layer verifies every factual claim - no invented prices or bookings.',
-      'Containerized full-stack delivery with a real-time booking backend.',
+      'Orchestrated 9 specialized LangChain/LangGraph agents across 32+ tools and 10 real SOAP endpoints (live hotel search, pricing, rooms, capacity, bookings), so every answer is grounded in tool output, never invented by the LLM, in any language the user writes in.',
+      'Built a hybrid booking flow: AI-driven search and context-aware conversation (pronouns, follow-ups, city switches) hands off to a UI form for guest details and a sandboxed SOAP reservation returning a real voucher, on a full-stack FastAPI + Next.js app with LangSmith tracing.',
     ],
-    tags: ['RAG', 'LLMs', 'Semantic Search', 'Docker', 'SOAP'],
+    tags: ['LangChain', 'LangGraph', 'Multi-Agent', 'SOAP APIs', 'FastAPI', 'Next.js', 'LangSmith'],
     featured: true,
     private: true,
   },

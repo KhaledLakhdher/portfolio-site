@@ -33,7 +33,7 @@
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\linespread{0.85}
+\linespread{0.83}
 
 % ---------- Coupures de ligne : éviter les césures moches ----------
 \exhyphenpenalty=10000
@@ -73,8 +73,8 @@ qualité des données, l'évaluation et un déploiement propre. À l'aise sur to
 \entry{Ingénieur IA - Projet de Fin d'Études (PFE)}{Févr. 2026 - Juin 2026 \textperiodcentered\ Tunisie}
 \org{CTT - Carthage Training \& Technologies}
 \begin{itemize}
-  \item Conception et développement de \textbf{Hotel Mind}, un assistant conversationnel de réservation hôtelière sur une architecture RAG ancrée connectée à une API SOAP en temps réel, avec une couche de mitigation des hallucinations vérifiant chaque affirmation factuelle.
-  \item Livraison d'une solution full-stack conteneurisée atteignant un nDCG@5 de 0,82, un MRR@5 de 0,90 et un taux de réussite de 100\,\% sur un jeu de requêtes de référence.
+  \item Conception et développement de \textbf{Hotel Mind}, un assistant multilingue multi-agents de réservation hôtelière : 9 agents LangChain/LangGraph appelant 32+ outils sur 10 endpoints SOAP réels (hôtels, chambres, tarifs en temps réel).
+  \item Ancrage de chaque réponse dans les données des outils, pas dans la mémoire du modèle, via un parcours hybride (recherche IA, formulaire client, réservation SOAP en sandbox) sur une app full-stack FastAPI + Next.js avec traçage LangSmith.
 \end{itemize}
 \vspace{2pt}
 \entry{Stagiaire Développeur en Intelligence Artificielle}{Juil. 2025 - Sept. 2025 \textperiodcentered\ Hammamet}
