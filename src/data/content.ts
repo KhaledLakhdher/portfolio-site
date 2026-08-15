@@ -127,17 +127,16 @@ export const projects: Project[] = [
     private: true,
   },
   {
-    title: 'AI Image Colorization & Code Generation',
+    title: 'DecisionFlow - AI Business Analyst',
     blurb:
-      'A dual system: a GAN that colorizes grayscale images and a multi-agent pipeline that writes full-stack apps.',
+      'Upload a spreadsheet, get a data warehouse: cleaning, a star schema, forecasts, and an analyst you can ask questions.',
     bullets: [
-      'Trained a Pix2Pix GAN (U-Net / PatchGAN) for automatic image colorization.',
-      'Multi-agent system (Planner / Architect / Coder) generates full-stack projects from a single prompt.',
-      'Served through an interactive web app: Flask backend, HTML/CSS/JS frontend, APIs.',
+      'Engineered a multi-tenant analytics platform (FastAPI, PostgreSQL, DuckDB, Polars, Redis, Next.js, TypeScript) carrying an uploaded CSV through a raw → clean → star pipeline, with tenant isolation enforced by PostgreSQL row-level security rather than application checks.',
+      'Engineered the analytics layer: foreign keys inferred from value containment, Holt-Winters forecasting, MAD anomaly detection, and RFM churn scoring, fronted by a Gemini narrative layer whose generated SQL clears a three-layer sandbox and refuses rather than guesses when the data cannot support an answer.',
     ],
-    tags: ['GANs', 'Pix2Pix', 'Agents', 'Flask'],
+    tags: ['FastAPI', 'DuckDB', 'PostgreSQL', 'RLS', 'Polars', 'Gemini', 'scikit-learn', 'Next.js', 'Playwright'],
     featured: true,
-    private: true,
+    github: 'https://github.com/KhaledLakhdher/DecisionFlow',
   },
 ]
 
