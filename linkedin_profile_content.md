@@ -56,10 +56,11 @@ Email: ing.khaledlakhdher@gmail.com
 
 ## Experience #1
 
-**Title:** AI Engineer — Final Year Project (Graduation)
+**Title:** AI Engineer
 **Company:** CTT — Carthage Training & Technologies
-**Dates:** Feb 2026 – Jun 2026
+**Dates:** Feb 2026 – Present
 **Location:** Tunisia
+**Note:** Started as a final-year project (PFE); converted to a full-time contract after graduation. On LinkedIn, check "I currently work here" so it shows as ongoing.
 
 ```
 Designed and built Hotel Mind, a multilingual, multi-agent hotel search and

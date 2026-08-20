@@ -27,9 +27,9 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    role: 'AI Engineer - Final Year Project (Graduation)',
+    role: 'AI Engineer',
     company: 'CTT - Carthage Training & Technologies',
-    period: 'Feb 2026 - Jun 2026',
+    period: 'Feb 2026 - Present',
     location: 'Tunisia',
     bullets: [
       'Designed and developed Hotel Mind, a multilingual, multi-agent hotel search and booking assistant: 9 LangChain/LangGraph agents call 32+ tools across 10 real SOAP endpoints for live hotel, room, and pricing data.',
