@@ -159,6 +159,24 @@ voice cloning via CSM-1B, cutting response time by 30%.
 Stack: ASR, TTS, Voice Cloning, Fine-tuning
 ```
 
+**6. DecisionFlow — AI Business Analyst**
+```
+Upload a spreadsheet, get a data warehouse: cleaning, a star schema,
+forecasts, and an analyst you can ask questions. Engineered a multi-tenant
+analytics platform (FastAPI, PostgreSQL, DuckDB, Polars, Redis, Next.js,
+TypeScript) carrying an uploaded CSV through a raw → clean → star pipeline,
+with tenant isolation enforced by PostgreSQL row-level security rather than
+application checks. The analytics layer infers foreign keys from value
+containment, runs Holt-Winters forecasting, MAD anomaly detection, and RFM
+churn scoring, fronted by a Gemini narrative layer whose generated SQL clears
+a three-layer sandbox and refuses rather than guesses when the data can't
+support an answer.
+
+Stack: FastAPI, DuckDB, PostgreSQL, RLS, Polars, Gemini, scikit-learn,
+Next.js, Playwright
+GitHub: https://github.com/KhaledLakhdher/DecisionFlow
+```
+
 ---
 
 ## Skills to add (search: Profile → Add skill)
